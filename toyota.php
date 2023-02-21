@@ -10,6 +10,7 @@
 <body>
     <h1><a href="https://www.toyota.ca/toyota/en/"><img class="emblem" src="/images/toyota/toyota.png" alt="Toyota emblem" width="500"></a></h1>
     <h1>Products Currently Available in Canada</h1>
+
     <?php
     $connect = mysqli_connect(
         'sql200.epizy.com',//Host
@@ -48,7 +49,7 @@
         echo '<h2>'.$product['year'].' '.$product['model'].$hybridLeaf.'</h2>';
         echo '<p>Starts at: $'.number_format($product['price'], 0, '.', ',').'</p>';
         echo '<img src="/images/toyota/'.$product['preview'].'" alt="Preview of '.$product['year'].' '.$product['model'].'" width="300"><br>';
-        echo '<p class="desc">Trim shown above: '.$product['previewed_trim'].'</p>';
+        echo '<p class="desc">Trim shown: '.$product['previewed_trim'].'</p>';
         echo '<p><a href="'.$product['explore'].'">Explore</a>'.' | '.'<a href="'.$product['build_pricing'].'">Build & Price</a></p>';
         echo '</div>';
     }
