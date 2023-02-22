@@ -26,7 +26,7 @@
     }
     $query = "SELECT *
     FROM toyota
-    ORDER BY id";
+    ORDER BY model";
     $result = mysqli_query($connect, $query) or die(mysqli_error());
 
     // echo "Number of rows ".mysqli_num_rows($result);
